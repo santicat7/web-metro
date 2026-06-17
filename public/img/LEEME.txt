@@ -1,0 +1,26 @@
+FOTOS DE METRO PIZZERÍA
+=======================
+
+Descargá estas fotos del Instagram oficial @metropizzeria.2024 y guardalas acá
+con EXACTAMENTE estos nombres. La página las toma automáticamente; mientras no
+estén, se muestra un placeholder dorado con su descripción (no se rompe nada).
+
+Archivos esperados
+------------------
+  hero.jpg     → Foto del ambiente del salón (mesas + luces). Es el fondo del hero.
+                 Ideal horizontal, ~1600px de ancho. También sirve para el preview
+                 al compartir por WhatsApp (Open Graph) → conviene una buena.
+  pizza-1.jpg  → Pizza al metro
+  pizza-2.jpg  → Fainá
+  pizza-3.jpg  → Tablitas / picada
+  pizza-4.jpg  → Chivito
+  faina.jpg    → Horno de leña o pizza saliendo del horno (va en la sección Historia)
+  logo.png     → Logo de Metro con FONDO TRANSPARENTE (nav, hero, footer y favicon)
+
+Recomendaciones
+---------------
+- Comprimí las fotos antes de subirlas (ej: squoosh.app o tinypng.com).
+  Objetivo: que cada foto pese menos de ~250 KB para que cargue rápido en datos
+  móviles. El hero puede pesar un poco más.
+- Mantené relaciones de aspecto parecidas a las que muestran las cards
+  (las de platos son 3:2 horizontal; la de historia es 4:5 vertical).

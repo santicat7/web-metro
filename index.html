@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ─── SEO ─────────────────────────────────────────────────────────── -->
+  <title>Metro Pizzería — Pizza al metro, de toda la vida en Paysandú</title>
+  <meta name="description" content="Pizzería tradicional de Paysandú con más de 20 años. Pizza al metro al horno de leña, fainá al momento, tablitas y chivitos. Pedí por WhatsApp." />
+  <meta name="theme-color" content="#0d0d0d" />
+  <link rel="canonical" href="https://metropizzeria.uy/" /> <!-- TODO: reemplazar con el dominio final -->
+
+  <!-- ─── Open Graph (preview al compartir por WhatsApp) ───────────────── -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="es_UY" />
+  <meta property="og:site_name" content="Metro Pizzería" />
+  <meta property="og:title" content="Metro Pizzería — Pizza al metro, de toda la vida en Paysandú" />
+  <meta property="og:description" content="Más de 20 años de pizza al horno de leña en Paysandú. Fainá al momento, tablitas y chivitos. Pedí por WhatsApp." />
+  <meta property="og:url" content="https://metropizzeria.uy/" /> <!-- TODO: dominio final -->
+  <meta property="og:image" content="https://metropizzeria.uy/public/img/hero.jpg" /> <!-- TODO: subir una foto 1200x630 buena para preview -->
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ─── Favicon ─────────────────────────────────────────────────────── -->
+  <link rel="icon" href="public/img/logo.png" /> <!-- TODO: agregar logo.png real -->
+
+  <!-- ─── Fuentes ─────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ─── JSON-LD: Restaurant (datos estructurados para Google) ────────── -->
+  <!-- TODO: completar dirección, teléfono, geo y horarios con los datos reales del Instagram/Google Maps -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Metro Pizzería",
+    "image": "https://metropizzeria.uy/public/img/hero.jpg",
+    "url": "https://metropizzeria.uy/",
+    "servesCuisine": ["Pizza", "Comida uruguaya"],
+    "priceRange": "$$",
+    "telephone": "+598 9X XXX XXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "DIRECCIÓN EXACTA",
+      "addressLocality": "Paysandú",
+      "addressRegion": "Paysandú",
+      "addressCountry": "UY"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-32.3214",
+      "longitude": "-58.0756"
+    },
+    "sameAs": [
+      "https://www.instagram.com/metropizzeria.2024"
+    ],
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Sunday"],
+        "opens": "19:00",
+        "closes": "23:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday", "Saturday"],
+        "opens": "19:00",
+        "closes": "00:30"
+      }
+    ],
+    "menu": "https://metropizzeria.uy/#menu",
+    "acceptsReservations": "False"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ====================================================================
+       NAV
+       ==================================================================== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="Metro Pizzería — inicio">
+      <img src="public/img/logo.png" alt="Metro Pizzería" />
+    </a>
+    <nav class="nav__links" aria-label="Navegación principal">
+      <a href="#historia">Nosotros</a>
+      <a href="#destacados">Destacados</a>
+      <a href="#menu">Menú</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#ubicacion">Dónde estamos</a>
+    </nav>
+    <!-- TODO: reemplazar 598XXXXXXXX por el WhatsApp real del Instagram -->
+    <a class="btn btn--wa nav__cta" href="https://wa.me/598XXXXXXXX?text=Hola%20Metro!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
+      Pedir por WhatsApp
+    </a>
+  </header>
+
+  <!-- ====================================================================
+       1 · HERO
+       ==================================================================== -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg img-ph" data-label="Foto del salón — ambiente del local (Instagram)">
+      <!-- TODO: reemplazar foto del Instagram (la del salón con mesas y luces) -->
+      <img src="public/img/hero.jpg" alt="Salón de Metro Pizzería en Paysandú" onerror="this.remove()" />
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="container hero__inner">
+      <img class="hero__logo" src="public/img/logo.png" alt="Metro Pizzería" />
+
+      <h1>Pizza al metro,<br /><span>de toda la vida</span></h1>
+      <p class="hero__tagline">Tradición sanducera al horno de leña desde hace más de 20 años.</p>
+
+      <div class="hero__meta">
+        <span><span class="dot">●</span> Horno de leña</span>
+        <span><span class="dot">●</span> Fainá al momento</span>
+        <span><span class="dot">●</span> Paysandú</span>
+      </div>
+
+      <div class="hero__cta">
+        <!-- TODO: WhatsApp real -->
+        <a class="btn btn--wa" href="https://wa.me/598XXXXXXXX?text=Hola%20Metro!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207z"/></svg>
+          Pedir por WhatsApp
+        </a>
+        <a class="btn btn--outline" href="#menu">Ver el menú</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Bajá</span>
+      <span>↓</span>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       2 · HISTORIA / BIENVENIDA
+       ==================================================================== -->
+  <section class="section" id="historia">
+    <div class="container historia__grid">
+      <div class="historia__text reveal">
+        <span class="eyebrow">Nuestra historia</span>
+        <h2>Una pizzería tradicional de Paysandú</h2>
+        <p>
+          Hace más de <strong>20 años</strong> que amasamos la misma masa finita y crocante,
+          la cocinamos en <strong>horno de leña</strong> y la servimos por metro para compartir
+          en la mesa. Como siempre, como toda la vida.
+        </p>
+        <p>
+          Nuestro <strong>fainá se hace en el momento</strong>, las tablitas salen calentitas
+          y el chivito es de los que se recuerdan. Sabor de barrio, hecho con tiempo.
+        </p>
+        <div class="historia__stats">
+          <div class="stat">
+            <div class="num">+20</div>
+            <div class="lbl">Años en Paysandú</div>
+          </div>
+          <div class="stat">
+            <div class="num">🔥</div>
+            <div class="lbl">Horno de leña</div>
+          </div>
+          <div class="stat">
+            <div class="num">★★★★★</div>
+            <div class="lbl">En Google Maps</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="historia__img img-ph reveal" data-label="Foto: horno de leña o pizza saliendo del horno (Instagram)">
+        <!-- TODO: reemplazar foto del Instagram -->
+        <img src="public/img/faina.jpg" alt="Pizza al horno de leña de Metro Pizzería" loading="lazy" onerror="this.remove()" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       3 · DESTACADOS
+       ==================================================================== -->
+  <section class="section section--soft" id="destacados">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lo que más piden</span>
+        <h2 class="section-title">Nuestros destacados</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="destacados__grid">
+        <!-- Card 1 -->
+        <article class="plato reveal">
+          <div class="plato__img img-ph" data-label="Foto: pizza al metro (Instagram)">
+            <!-- TODO: reemplazar foto del Instagram -->
+            <img src="public/img/pizza-1.jpg" alt="Pizza al metro de Metro Pizzería" loading="lazy" onerror="this.remove()" />
+          </div>
+          <div class="plato__body">
+            <span class="plato__tag">El clásico</span>
+            <h3>Pizza al metro</h3>
+            <p>Masa finita y crocante al horno de leña, para compartir en la mesa. La de toda la vida.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="plato reveal">
+          <div class="plato__img img-ph" data-label="Foto: fainá (Instagram)">
+            <!-- TODO: reemplazar foto del Instagram -->
+            <img src="public/img/pizza-2.jpg" alt="Fainá recién hecho" loading="lazy" onerror="this.remove()" />
+          </div>
+          <div class="plato__body">
+            <span class="plato__tag">Hecho al momento</span>
+            <h3>Fainá</h3>
+            <p>El acompañante perfecto de la pizza. Dorado, finito y hecho en el momento. Un diferencial.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="plato reveal">
+          <div class="plato__img img-ph" data-label="Foto: tablitas (Instagram)">
+            <!-- TODO: reemplazar foto del Instagram -->
+            <img src="public/img/pizza-3.jpg" alt="Tablitas para compartir" loading="lazy" onerror="this.remove()" />
+          </div>
+          <div class="plato__body">
+            <span class="plato__tag">Para compartir</span>
+            <h3>Tablitas</h3>
+            <p>Variedad de fiambres, quesos y picadas calentitas para arrancar la noche entre todos.</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="plato reveal">
+          <div class="plato__img img-ph" data-label="Foto: chivito (Instagram)">
+            <!-- TODO: reemplazar foto del Instagram -->
+            <img src="public/img/pizza-4.jpg" alt="Chivito completo de Metro Pizzería" loading="lazy" onerror="this.remove()" />
+          </div>
+          <div class="plato__body">
+            <span class="plato__tag">Bien sanducero</span>
+            <h3>Chivito</h3>
+            <p>Completo, abundante y como tiene que ser. De los que se recuerdan.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       4 · MENÚ COMPLETO
+       ==================================================================== -->
+  <!-- TODO: reemplazar TODOS los precios y platos con el menú real. Moneda: $ (pesos uruguayos). -->
+  <section class="section" id="menu">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Carta completa</span>
+        <h2 class="section-title">Nuestro menú</h2>
+        <div class="rule"></div>
+        <p class="section-intro">Precios en pesos uruguayos. Pedí por WhatsApp para llevar o comer en el local.</p>
+      </div>
+
+      <div class="menu__grid reveal">
+
+        <!-- Pizzas -->
+        <div class="menu__cat">
+          <h3>Pizzas <span class="hint">por metro · por porción</span></h3>
+          <div class="menu__item">
+            <span class="nm">Muzzarella<span class="ds">La clásica al horno de leña</span></span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Muletilla<span class="ds">La favorita de la casa</span></span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Tomate y albahaca<span class="ds">Fresca y simple</span></span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Napolitana</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Especial Metro</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+        </div>
+
+        <!-- Fainá -->
+        <div class="menu__cat">
+          <h3>Fainá <span class="hint">al momento</span></h3>
+          <div class="menu__item">
+            <span class="nm">Fainá porción</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Fainá al metro</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+        </div>
+
+        <!-- Minutas / chivitos / sándwiches -->
+        <div class="menu__cat">
+          <h3>Minutas y chivitos</h3>
+          <div class="menu__item">
+            <span class="nm">Chivito completo<span class="ds">Al plato o al pan</span></span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Chivito canadiense</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Milanesa con guarnición</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Hamburguesa completa</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+        </div>
+
+        <!-- Bebidas -->
+        <div class="menu__cat">
+          <h3>Bebidas</h3>
+          <div class="menu__item">
+            <span class="nm">Refresco línea Coca-Cola 1.5L</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Agua / agua saborizada</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Cerveza</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+        </div>
+
+        <!-- Postres -->
+        <div class="menu__cat">
+          <h3>Postres</h3>
+          <div class="menu__item">
+            <span class="nm">Flan casero</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+          <div class="menu__item">
+            <span class="nm">Helado</span>
+            <span class="dots"></span>
+            <span class="pr">$ ___</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="menu__note reveal">
+        <p>¿Listo para pedir? Te tomamos el pedido por WhatsApp en un toque.</p>
+        <!-- TODO: WhatsApp real -->
+        <a class="btn btn--wa" href="https://wa.me/598XXXXXXXX?text=Hola%20Metro!%20Quiero%20hacer%20un%20pedido%20del%20men%C3%BA" target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207z"/></svg>
+          Hacer mi pedido
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       5 · RESEÑAS
+       ==================================================================== -->
+  <!-- TODO: reemplazar por reseñas REALES copiadas del Google Maps de Metro. Formato: texto / nombre / estrellas. -->
+  <section class="section section--soft" id="resenas">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lo que dicen los vecinos</span>
+        <h2 class="section-title">Reseñas de Google</h2>
+        <div class="rule"></div>
+      </div>
+
+      <div class="resenas__grid">
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+
+        <article class="resena reveal">
+          <div class="resena__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <p class="resena__text">Reseña real de Google Maps — reemplazar con el texto que pega Santi.</p>
+          <div class="resena__author">
+            <span class="resena__avatar">N</span>
+            <span><strong>Nombre Apellido</strong></span>
+          </div>
+        </article>
+      </div>
+
+      <p class="resenas__source reveal">Reseñas reales de nuestros clientes en Google Maps ★</p>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       6 · UBICACIÓN + HORARIOS
+       ==================================================================== -->
+  <section class="section" id="ubicacion">
+    <div class="container ubic__grid">
+      <div class="ubic__info reveal">
+        <span class="eyebrow">Dónde estamos</span>
+        <h2>Pasá a buscarlo o pedí a domicilio</h2>
+
+        <div class="ubic__row">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <div class="lbl">Dirección</div>
+            <!-- TODO: dirección exacta del Google Maps de ellos -->
+            <div class="val">Dirección exacta, Paysandú, Uruguay</div>
+          </div>
+        </div>
+
+        <div class="ubic__row">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <div>
+            <div class="lbl">Teléfono / WhatsApp</div>
+            <!-- TODO: número real del Instagram -->
+            <div class="val"><a href="https://wa.me/598XXXXXXXX" target="_blank" rel="noopener">+598 9X XXX XXX</a></div>
+          </div>
+        </div>
+
+        <div class="ubic__row">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <div style="width:100%">
+            <div class="lbl">Horarios</div>
+            <!-- TODO: horarios reales del Instagram -->
+            <ul class="ubic__horarios">
+              <li><span>Lunes</span><span>Cerrado</span></li>
+              <li><span>Martes a Jueves</span><span>19:00 – 23:30</span></li>
+              <li><span>Viernes y Sábado</span><span>19:00 – 00:30</span></li>
+              <li><span>Domingo</span><span>19:00 – 23:30</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ubic__actions">
+          <!-- TODO: reemplazar por el link real de Google Maps del local -->
+          <a class="btn btn--gold" href="https://maps.google.com/?q=Metro+Pizzeria+Paysandu" target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+
+      <div class="ubic__map reveal">
+        <!-- TODO: reemplazar el src del iframe por el embed real del Google Maps del local
+             (en Google Maps: Compartir → Insertar un mapa → copiar el src). Sin API key. -->
+        <iframe
+          src="https://www.google.com/maps?q=Paysand%C3%BA%2C%20Uruguay&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Metro Pizzería en Paysandú"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       7 · FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">
+            <img src="public/img/logo.png" alt="Metro Pizzería" />
+          </div>
+          <p>Pizza al metro al horno de leña. Tradición sanducera desde hace más de 20 años.</p>
+        </div>
+
+        <div>
+          <h4>Contacto</h4>
+          <ul class="footer__list">
+            <!-- TODO: datos reales -->
+            <li><span>Dirección exacta, Paysandú</span></li>
+            <li><a href="https://wa.me/598XXXXXXXX" target="_blank" rel="noopener">WhatsApp: +598 9X XXX XXX</a></li>
+            <li>
+              <a class="footer__social" href="https://www.instagram.com/metropizzeria.2024" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                @metropizzeria.2024
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Secciones</h4>
+          <ul class="footer__list">
+            <li><a href="#historia">Nosotros</a></li>
+            <li><a href="#destacados">Destacados</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#ubicacion">Dónde estamos</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Metro Pizzería · Paysandú, Uruguay</span>
+        <span>Sitio web por <a href="https://nikatoestudio.uy" target="_blank" rel="noopener">Nikato Estudio</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── WhatsApp flotante (siempre visible, ideal mobile) ─────────────── -->
+  <!-- TODO: WhatsApp real -->
+  <a class="wa-float" href="https://wa.me/598XXXXXXXX?text=Hola%20Metro!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp">
+    <span class="wa-float__label">Pedí por WhatsApp</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.207zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
