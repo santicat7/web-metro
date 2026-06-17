@@ -319,7 +319,7 @@ body::after {
 }
 
 .nav__cta {
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.35rem;   /* >=44px de alto para tap en mobile */
   font-size: 0.92rem;
 }
 
@@ -337,6 +337,7 @@ body::after {
    ========================================================================= */
 .hero {
   position: relative;
+  min-height: 100vh;     /* fallback navegadores viejos */
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
@@ -499,6 +500,21 @@ body::after {
   font-size: 2.4rem;
   color: var(--dorado);
   line-height: 1;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  min-height: 2.4rem;
+}
+
+.stat .num svg {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+/* estrellas de rating: tamaño legible y consistente con el resto de la fila */
+.stat .num.stars {
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
 }
 
 .stat .lbl {
@@ -649,6 +665,7 @@ body::after {
   color: var(--dorado-claro);
   font-weight: 600;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums;
 }
 
 .menu__note {
